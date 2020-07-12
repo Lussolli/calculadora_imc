@@ -26,25 +26,42 @@ class _HomeState extends State<Home> {
               )
             ]),
         backgroundColor: Colors.white,
-        body: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Icon(Icons.person_outline, size: 120, color: Colors.green),
-              TextField(
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                    labelText: 'Peso (Kg)',
-                    labelStyle: TextStyle(color: Colors.green)),
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.green, fontSize: 25.0),
-              ),
-              TextField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                      labelText: 'Altura (cm)',
-                      labelStyle: TextStyle(color: Colors.green)),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.green, fontSize: 25))
-            ]));
+        body: SingleChildScrollView(
+            padding: EdgeInsets.only(left: 10.0, right: 10.0),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Icon(Icons.person_outline, size: 120, color: Colors.green),
+                  TextField(
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                        labelText: 'Peso (Kg)',
+                        labelStyle: TextStyle(color: Colors.green)),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.green, fontSize: 25.0),
+                  ),
+                  TextField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                          labelText: 'Altura (cm)',
+                          labelStyle: TextStyle(color: Colors.green)),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.green, fontSize: 25)),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                    child: Container(
+                        height: 50.0,
+                        child: RaisedButton(
+                          onPressed: () {},
+                          child: Text('Calcular',
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 25.0)),
+                          color: Colors.green,
+                        )),
+                  ),
+                  Text('Info',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.green, fontSize: 25.0))
+                ])));
   }
 }
